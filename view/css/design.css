@@ -1,0 +1,113 @@
+
+body {
+    font: white;
+    text-align: center;
+}
+.menu {
+    position: relative;
+    background-color: #b59feb;;
+    height: 100px;
+    padding-bottom: 15px;
+   
+}
+
+.carrosel {
+    position: relative;
+    background-color: rgb(137, 104, 197);
+    height: 500px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+.produtos {
+    position: relative;
+    display: flex;
+    background-color: rgb(219, 219, 219);
+    height: auto;
+    padding-left: auto;
+    margin-bottom: 10px;
+}
+
+
+.informacional {
+    position: relative;
+    background-color: #c4eac9;
+    height: 500px;
+    margin-left:  25%;
+    margin-right: 25%;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+
+.elemento {
+    text-align: center;
+    position: inherit;
+    background-color: #fbb59c;
+    height: 350px;
+    width:  350px;
+    border-radius: 30px;
+    padding-bottom: 15px;
+    margin-left: 50px;
+}
+
+.footer {
+    position: relative;
+    background-color: #b59feb;;
+    height: 80px;
+    padding-bottom: 15px;
+   
+}
+
+.container {
+    background-color:  rgb(93, 192, 196);
+    border-radius:  30px;
+    padding: 250px;
+    margin: auto;
+    width: 50%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.425);
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.login {
+    background-color:  rgb(93, 192, 196);
+    border-radius:  30px;
+    padding: 200px;
+    margin: auto;
+    width: 20%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.425);
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.game_form {
+    background-color: rgb(29, 98, 110);
+    width: 75%;
+    height: 600px;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.pontos {
+    background-color: rgb(120, 189, 201);
+    width: 50%;
+    height: 150px;
+}
+
+.atividades {
+    display: flex;
+}
+
+.elemento2 {
+    text-align: center;
+    position: inherit;
+    background-color: rgb(120, 197, 202);
+    height: 350px;
+    width:  350px;
+    border-radius: 30px;
+    padding-bottom: 15px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
