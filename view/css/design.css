@@ -39,8 +39,12 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.719);
 }
 
-
+.produtos h1 {
+    padding-top: 100px;
+    position: absolute;
+}
 .elemento {
+    margin-top: 200px;
     text-align: center;
     position: inherit;
     background: rgb(2,0,36);
@@ -50,6 +54,7 @@
     border-radius:32% 68% 44% 56% / 74% 51% 49% 26% ;
     padding-bottom: 15px;
     margin-left: 50px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.719);
 }
 .elemento p {
     color: white;
@@ -64,6 +69,40 @@
    
 }
 
+.little_square {
+    display: flex;
+    margin-left: 27%;
+}
+
+.square {
+    
+    text-align: center;
+    position: inherit;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 0.986) 10%, rgba(6, 70, 126, 0.479) 100%, rgba(126, 200, 212, 0.507) 100%);
+    height: 100px;
+    width:  100px;
+    margin-left: 50px;
+    padding-bottom: 15px;
+    margin-bottom: 50px;;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.719);
+}
+
+.square:hover {
+    background: rgb(2,0,36);
+}
+.info h1{
+    color: white;
+}
+.info {
+    position: relative;
+    margin-top: 150px;
+    height: auto;
+    padding-left: 5%;
+    margin-bottom: 10px;
+    font-family: 'Zen Dots';
+    background-color: #030303ee;
+}
 .container {
     color: white;
     background: rgb(2,0,36);
