@@ -119,19 +119,11 @@ footer div .inf p {
     text-align:center;
 }
 .btn-destaque {
-    /* border: none; */
-    border-color: transparent;
-    background-color: rgb(23,122,101);
-    *background-color: rgb(23,122,101);
-    background-image: top, rgb(23,122,101), rgb(23,122,101);
-    background-image: linear, 0 0, 0 100%, from(rgb(23,122,101), to(rgb(23,122,101)));
-    background-image: top, rgb(23,122,101), rgb(23,122,101);
-    background-image: -o-linear-gradient(top, rgb(23,122,101), rgb(23,122,101));
-    background-image: linear-gradient(to bottom, rgb(23,122,101), rgb(23,122,101));
-    color: #ffffff;
-    font-size: 15px;
+    width: 10rem;
     margin-bottom: 10px;
     margin-top: 10px;
+    border-radius: 3rem;
+    
 }
 
 .btn .btn-destaque a {
@@ -150,7 +142,7 @@ font-size: 15px;
     background-color: #ebebeb;
     *background-color: #ebebeb;
     background-image: -moz-linear-gradient(top, #d8d8d8, #d8d8d8);
-    background-image: linear, 0 0, 0 100%, from(#d8d8d8), to(#d8d8d8);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d8d8d8), to(#d8d8d8));
     background-image: -webkit-linear-gradient(top, #d8d8d8, #d8d8d8);
     background-image: -o-linear-gradient(top, #d8d8d8, #d8d8d8);
     background-image: linear-gradient(to bottom, #d8d8d8, #d8d8d8);
