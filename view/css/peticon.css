@@ -1,0 +1,472 @@
+@font-face {
+	font-family: "Peticon";
+	src: url("font/peticon.eot?11909116");
+	src: url("font/peticon.eot?11909116#iefix") format("embedded-opentype"),
+	url("font/peticon.woff?11909116") format("woff"),
+	url("font/peticon.ttf?11909116") format("truetype"),
+	url("font/peticon.svg?11909116") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="peticon-"]:before, [class*=" peticon-"]:before,
+[class^="peticon-"]:after, [class*=" peticon-"]:after {   
+	font-family: Peticon;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em; 
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */ 
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}.peticon-13:before {
+	content: "\e000";
+}
+.peticon-1kg:before {
+	content: "\e001";
+}
+.peticon-28:before {
+	content: "\e002";
+}
+.peticon-310:before {
+	content: "\e003";
+}
+.peticon-39:before {
+	content: "\e004";
+}
+.peticon-53:before {
+	content: "\e005";
+}
+.peticon-54:before {
+	content: "\e006";
+}
+.peticon-animal20:before {
+	content: "\e007";
+}
+.peticon-black246:before {
+	content: "\e008";
+}
+.peticon-black247:before {
+	content: "\e009";
+}
+.peticon-black248:before {
+	content: "\e00a";
+}
+.peticon-black249:before {
+	content: "\e00b";
+}
+.peticon-black250:before {
+	content: "\e00c";
+}
+.peticon-black254:before {
+	content: "\e00d";
+}
+.peticon-black255:before {
+	content: "\e00e";
+}
+.peticon-black257:before {
+	content: "\e00f";
+}
+.peticon-black258:before {
+	content: "\e010";
+}
+.peticon-bone3:before {
+	content: "\e011";
+}
+.peticon-bones4:before {
+	content: "\e012";
+}
+.peticon-bones5:before {
+	content: "\e013";
+}
+.peticon-cat19:before {
+	content: "\e014";
+}
+.peticon-cat20:before {
+	content: "\e015";
+}
+.peticon-cat21:before {
+	content: "\e016";
+}
+.peticon-cat22:before {
+	content: "\e017";
+}
+.peticon-cat23:before {
+	content: "\e018";
+}
+.peticon-cat24:before {
+	content: "\e019";
+}
+.peticon-cat25:before {
+	content: "\e01a";
+}
+.peticon-cat26:before {
+	content: "\e01b";
+}
+.peticon-cat27:before {
+	content: "\e01c";
+}
+.peticon-cat28:before {
+	content: "\e01d";
+}
+.peticon-cat29:before {
+	content: "\e01e";
+}
+.peticon-cat30:before {
+	content: "\e01f";
+}
+.peticon-cat31:before {
+	content: "\e020";
+}
+.peticon-cat32:before {
+	content: "\e021";
+}
+.peticon-cat33:before {
+	content: "\e022";
+}
+.peticon-cat34:before {
+	content: "\e023";
+}
+.peticon-cat35:before {
+	content: "\e024";
+}
+.peticon-cat36:before {
+	content: "\e025";
+}
+.peticon-cat37:before {
+	content: "\e026";
+}
+.peticon-cat38:before {
+	content: "\e027";
+}
+.peticon-cat39:before {
+	content: "\e028";
+}
+.peticon-cat40:before {
+	content: "\e029";
+}
+.peticon-cat41:before {
+	content: "\e02a";
+}
+.peticon-cat42:before {
+	content: "\e02b";
+}
+.peticon-cat43:before {
+	content: "\e02c";
+}
+.peticon-cat44:before {
+	content: "\e02d";
+}
+.peticon-cat45:before {
+	content: "\e02e";
+}
+.peticon-cat46:before {
+	content: "\e02f";
+}
+.peticon-cats1:before {
+	content: "\e030";
+}
+.peticon-cats2:before {
+	content: "\e031";
+}
+.peticon-comb12:before {
+	content: "\e032";
+}
+.peticon-curious:before {
+	content: "\e033";
+}
+.peticon-dog28:before {
+	content: "\e034";
+}
+.peticon-dog29:before {
+	content: "\e035";
+}
+.peticon-dog30:before {
+	content: "\e036";
+}
+.peticon-dog31:before {
+	content: "\e037";
+}
+.peticon-dog32:before {
+	content: "\e038";
+}
+.peticon-dog33:before {
+	content: "\e039";
+}
+.peticon-dog34:before {
+	content: "\e03a";
+}
+.peticon-dog35:before {
+	content: "\e03b";
+}
+.peticon-dog36:before {
+	content: "\e03c";
+}
+.peticon-dog37:before {
+	content: "\e03d";
+}
+.peticon-dog38:before {
+	content: "\e03e";
+}
+.peticon-dog39:before {
+	content: "\e03f";
+}
+.peticon-dog40:before {
+	content: "\e040";
+}
+.peticon-dog41:before {
+	content: "\e041";
+}
+.peticon-dog42:before {
+	content: "\e042";
+}
+.peticon-dog43:before {
+	content: "\e043";
+}
+.peticon-dog44:before {
+	content: "\e044";
+}
+.peticon-dog45:before {
+	content: "\e045";
+}
+.peticon-dog46:before {
+	content: "\e046";
+}
+.peticon-dog47:before {
+	content: "\e047";
+}
+.peticon-dog48:before {
+	content: "\e048";
+}
+.peticon-dog49:before {
+	content: "\e049";
+}
+.peticon-dog50:before {
+	content: "\e04a";
+}
+.peticon-dog51:before {
+	content: "\e04b";
+}
+.peticon-dog52:before {
+	content: "\e04c";
+}
+.peticon-dog53:before {
+	content: "\e04d";
+}
+.peticon-dog54:before {
+	content: "\e04e";
+}
+.peticon-dog55:before {
+	content: "\e04f";
+}
+.peticon-dog56:before {
+	content: "\e050";
+}
+.peticon-dog57:before {
+	content: "\e051";
+}
+.peticon-dogs1:before {
+	content: "\e052";
+}
+.peticon-dogs2:before {
+	content: "\e053";
+}
+.peticon-female174:before {
+	content: "\e054";
+}
+.peticon-female181:before {
+	content: "\e055";
+}
+.peticon-first25:before {
+	content: "\e056";
+}
+.peticon-first26:before {
+	content: "\e057";
+}
+.peticon-fish20:before {
+	content: "\e058";
+}
+.peticon-fish21:before {
+	content: "\e059";
+}
+.peticon-fish22:before {
+	content: "\e05a";
+}
+.peticon-fish23:before {
+	content: "\e05b";
+}
+.peticon-fish24:before {
+	content: "\e05c";
+}
+.peticon-food24:before {
+	content: "\e05d";
+}
+.peticon-food25:before {
+	content: "\e05e";
+}
+.peticon-food26:before {
+	content: "\e05f";
+}
+.peticon-frontal16:before {
+	content: "\e060";
+}
+.peticon-happy22:before {
+	content: "\e061";
+}
+.peticon-jumping26:before {
+	content: "\e062";
+}
+.peticon-kitty1:before {
+	content: "\e063";
+}
+.peticon-love41:before {
+	content: "\e064";
+}
+.peticon-love42:before {
+	content: "\e065";
+}
+.peticon-male174:before {
+	content: "\e066";
+}
+.peticon-male181:before {
+	content: "\e067";
+}
+.peticon-meow:before {
+	content: "\e068";
+}
+.peticon-minus40:before {
+	content: "\e069";
+}
+.peticon-mouse32:before {
+	content: "\e06a";
+}
+.peticon-mouse33:before {
+	content: "\e06b";
+}
+.peticon-pet30:before {
+	content: "\e06c";
+}
+.peticon-pet31:before {
+	content: "\e06d";
+}
+.peticon-pet32:before {
+	content: "\e06e";
+}
+.peticon-pet33:before {
+	content: "\e06f";
+}
+.peticon-pet34:before {
+	content: "\e070";
+}
+.peticon-pet35:before {
+	content: "\e071";
+}
+.peticon-pet36:before {
+	content: "\e072";
+}
+.peticon-pet37:before {
+	content: "\e073";
+}
+.peticon-pet38:before {
+	content: "\e074";
+}
+.peticon-pet39:before {
+	content: "\e075";
+}
+.peticon-pet40:before {
+	content: "\e076";
+}
+.peticon-pets10:before {
+	content: "\e077";
+}
+.peticon-pets11:before {
+	content: "\e078";
+}
+.peticon-pets12:before {
+	content: "\e079";
+}
+.peticon-pets4:before {
+	content: "\e07a";
+}
+.peticon-pets5:before {
+	content: "\e07b";
+}
+.peticon-pets6:before {
+	content: "\e07c";
+}
+.peticon-pets7:before {
+	content: "\e07d";
+}
+.peticon-pets9:before {
+	content: "\e07e";
+}
+.peticon-poop:before {
+	content: "\e07f";
+}
+.peticon-prohibition10:before {
+	content: "\e080";
+}
+.peticon-quality1:before {
+	content: "\e081";
+}
+.peticon-resting1:before {
+	content: "\e082";
+}
+.peticon-scissors35:before {
+	content: "\e083";
+}
+.peticon-shaggy:before {
+	content: "\e084";
+}
+.peticon-sitting8:before {
+	content: "\e085";
+}
+.peticon-small163:before {
+	content: "\e086";
+}
+.peticon-small165:before {
+	content: "\e087";
+}
+.peticon-small168:before {
+	content: "\e088";
+}
+.peticon-sport10:before {
+	content: "\e089";
+}
+.peticon-street5:before {
+	content: "\e08a";
+}
+.peticon-syringe17:before {
+	content: "\e08b";
+}
+.peticon-syringe18:before {
+	content: "\e08c";
+}
+.peticon-thin29:before {
+	content: "\e08d";
+}
+.peticon-thread6:before {
+	content: "\e08e";
+}
+.peticon-walking12:before {
+	content: "\e08f";
+}
