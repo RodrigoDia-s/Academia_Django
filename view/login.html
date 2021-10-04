@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/bootstrap-grid.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/Main.css" />
+    <link rel="stylesheet" href="css/design.css" />
     <link href="css/fontello.css" rel="stylesheet" />
     <link href="css/peticon.css" rel="stylesheet" />
     <script src="js/bootstrap.bundle.js"></script>
@@ -103,8 +104,7 @@
                     Logar</button>
                 <br>
 
-                <button ID="btnCadastrar" runat="server" Class="btn btn-outline-info btn-destaque" Enabled="true"
-                    OnClick="btnCadastrar_Click">Cadastrar</button>
+                <a href="/view/cadastro2.html" class="btn btn-outline-info btn-destaque">Cadastrar</a>
 
             </div>
 
@@ -126,76 +126,7 @@
             </div>
         </footer>
     </div>
-    <style>
-        .box-menu {
-            width: 600px;
-
-            border-radius: 45px;
-            padding: 100px;
-            position: relative;
-            left: 50%;
-            transform: translate(-50%, 5%);
-            background: black;
-            text-align: center;
-            font-family: sans-serif;
-            margin-bottom: 50px;
-            margin-top: 5%;
-            margin-bottom: 5%;
-        }
-
-        .box-menu h1 {
-            color: white;
-            text-transform: uppercase;
-            font-weight: 500;
-        }
-
-        .box-menu input[type="text"],
-        .box-menu input[type="password"] {
-            border: 0;
-            background: none;
-            display: block;
-            margin: 20px auto;
-            text-align: center;
-            border: 2px solid white;
-            padding: 14px 10px;
-            width: 200px;
-            outline: none;
-            color: white;
-            border-radius: 24px;
-            transition: 0.25s;
-        }
-
-        .box-menu input[type="text"]:focus,
-        .box-menu input[type="password"]:focus {
-            width: 400px;
-            border-color: rgb(23, 122, 101);
-
-        }
-
-
-        .box-menu input[type="submit"] {
-            border: 0;
-            background: none;
-            display: block;
-            margin-top: 20px;
-            margin-left: 30%;
-            text-align: center;
-            border: 2px solid rgb(23, 122, 101);
-            padding: 14px 40px;
-            width: 200px;
-            outline: none;
-            color: white;
-            border-radius: 24px;
-            transition: 0.25s;
-            cursor: pointer;
-        }
-
-
-
-        .box-menu input[type="submit"]:hover {
-            background: rgb(23, 122, 101);
-        }
-    </style>
+    
 </body>
 
 </html>
