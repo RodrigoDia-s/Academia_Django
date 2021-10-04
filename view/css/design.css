@@ -54,12 +54,13 @@ font-size: 15px;
 }
 
 .produtos {
+   
     position: relative;
     display: flex;
     height: auto;
-    padding-left: 5%;
     margin-bottom: 10px;
-    font-family: 'Zen Dots';
+    color: white;
+    margin-left: -3px;
 }
 
 
@@ -84,7 +85,8 @@ font-size: 15px;
 }
 .elemento {
     margin-top: 200px;
-    text-align: center;
+    font-family: Arial; 
+     padding: 0px; 
     position: inherit;
     background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(2,0,36,1) 43%, rgba(154,68,150,1) 100%, rgba(126,200,212,1) 100%);
@@ -94,7 +96,14 @@ font-size: 15px;
     padding-bottom: 2rem;
     margin-left: 50px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.719);
+    text-align: center;
 }
+.formProduto {
+    text-align: center;
+    border-style: solid;
+    background-color: white;
+}
+
 .elemento p {
     color: white;
     position: relative;
@@ -142,18 +151,7 @@ font-size: 15px;
     font-family: 'Zen Dots';
     background-color: #030303ee;
 }
-.container {
-    color: white;
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 43%, rgba(6,70,126,1) 100%, rgba(126,200,212,1) 100%);
-    border-radius:  30px;
-    padding: 250px;
-    margin: auto;
-    width: 50%;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.425);
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
+
 
 .login {
     color: white;
@@ -207,3 +205,147 @@ font-size: 15px;
     box-shadow: 5px 5px 10px rgba(250, 246, 246, 0.719);
 }
 
+.box-menu {
+    width: 600px;
+
+    border-radius: 45px;
+    padding: 100px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 5%);
+    background: black;
+    text-align: center;
+    font-family: sans-serif;
+    margin-bottom: 50px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.box-menu h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box-menu input[type="text"],
+.box-menu input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid white;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box-menu input[type="text"]:focus,
+.box-menu input[type="password"]:focus {
+    width: 400px;
+    border-color: rgb(23, 122, 101);
+
+}
+
+
+.box-menu input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin-top: 20px;
+    margin-left: 30%;
+    text-align: center;
+    border: 2px solid rgb(23, 122, 101);
+    padding: 14px 40px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+
+
+.box-menu input[type="submit"]:hover {
+    background: rgb(23, 122, 101);
+}
+
+.box-menu2 {
+    width: 600px;
+    height: auto;
+    border-radius: 45px;
+    padding: 100px;
+    position: relative;
+    margin-left: 2rem;
+    background: black;
+    text-align: center;
+    font-family: sans-serif;
+    margin-bottom: 50px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.box-menu2 h1 {
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.123);
+    background-color: rgba(255, 255, 255, 0.123);
+    border-radius: 30px;
+    padding: 40px;
+    
+    position: relative;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+}
+
+.box-menu2 p {
+    font-size: x-large;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 4px;
+    margin-bottom: 40px;
+    color: white;
+    text-align: justify;
+    font-weight: 500;
+}
+
+.btn-outline-rod {
+    color: rgba(154,68,150,1);
+    background-color: transparent;
+    background-image: none;
+    border-style: solid;
+    border-color: rgba(154,68,150,1);
+    height: 50px;
+    width: 150px;
+    border-radius: 45px;
+    margin-bottom: 0px;
+    padding-top: 0.7rem;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+   
+  }
+  
+  .btn-outline-rod:hover {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(154,68,150,1);
+    border-color: rgba(154,68,150,1);
+  }
+  .btn-outline-rod a {
+      text-decoration: none;
+      color: white;
+      text-align: center;
+  }
+  .btn-outline-rod a:hover {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
