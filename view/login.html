@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/bootstrap-grid.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/Main.css"/>
+    <link rel="stylesheet" href="css/Main.css" />
     <link href="css/fontello.css" rel="stylesheet" />
     <link href="css/peticon.css" rel="stylesheet" />
     <script src="js/bootstrap.bundle.js"></script>
@@ -18,162 +19,183 @@
     <script src="js/validator.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <title>Login</title>
-    </head>
-    <body style="font-family: Arial;  padding: 0px; " >
-        
-            <header>
-                <div class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color : black; position: static; border-radius:unset;margin:0px;" >
-                     <div class="navbar-header">
-                       <a  class="navbar-brand" href="default.html" style=" margin-left:5px; margin-right:100px; padding: 2%; ">
-                            <img src="img/Logo.png" alt='Bem vindo' style="width: 125px; height: 125px;" />
-                       </a>
-                              
+</head>
+
+<body style="font-family: Arial;  padding: 0px; ">
+
+    <header>
+        <div class="navbar navbar-expand-md navbar-dark fixed-top"
+            style="background-color : black; position: static; border-radius:unset;margin:0px;">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="default.html" style=" margin-left:5px; margin-right:100px; padding: 2%; ">
+                    <img src="img/Logo.png" alt='Bem vindo' style="width: 125px; height: 125px;" />
+                </a>
+
+            </div>
+            <nav class="menu">
+                <div class="collapse navbar-collapse" style="display:flex; ">
+                    <ul class="navbar-nav mr-auto" style="background-color:#375757;">
+                        <li class="dropdown-item" style="background-color:black;">
+                            <a class="dropdown-item"
+                                style="  font-family: sans-serif; font-weight:300;  background-color :black; text-decoration: none; color:white; font-size: medium;"
+                                href="default.html">
+                                Página inicial</a>
+
+                        </li>
+                        <li class="dropdown-item " style="background-color:black;">
+                            <a class="dropdown-item"
+                                style=" font-family: sans-serif; font-weight:300; background-color:black;text-decoration: none; color:white;font-size: medium;"
+                                href="SobreNos.aspx">
+                                Quem Somos</a>
+
+                        </li>
+                        <li class="dropdown-item " style="background-color:black;">
+                            <a class="dropdown-item"
+                                style=" font-family: sans-serif; font-weight:300; background-color:black;text-decoration: none; color:white;font-size: medium;"
+                                href="Noticias.aspx">
+                                Conteudo</a>
+
+                        </li>
+                        <li id="utilitarios" runat="server" class="dropdown-item" style="background-color:black;">
+                            <a class="dropdown-item"
+                                style=" font-family: sans-serif; font-weight:300; background-color:black;text-decoration: none; color:white;font-size: medium;"
+                                href="CadNoticias.aspx">
+                                Conteudo Editor</a>
+
+                        </li>
+                    </ul>
+                    <div style="float:inherit; margin-right:50px; ">
+                        <ul id="UserLogar" runat="server" class="navbar-nav mr-auto text-right ">
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"
+                                    style="text-decoration: none; color:white;font-size: medium; padding:0%; ">
+                                    <img src="img/User.png" style="width:45px; height:50px" />
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdown01"
+                                    style=" color: white;text-align:center; position: page; background-color: rgb(45, 132, 119); padding:0px; float:left;  ">
+                                    <a class="dropdown-item" style="font-size:medium " href="cadastro2.html">Criar
+                                        Conta</a>
+                                    <a class="dropdown-item" style="font-size:medium " href="login.html">Login</a>
+                                </div>
+
+                        </ul>
+
+                    </div>
+
                 </div>
-            <nav class="menu"> 
-             <div  class="collapse navbar-collapse" style="display:flex; ">        
-                <ul class="navbar-nav mr-auto" style="background-color:#375757;">
-                            <li class="dropdown-item"  style="background-color:black;">
-                                <a class="dropdown-item" style="  font-family: sans-serif; font-weight:300;  background-color :black; text-decoration: none; color:white; font-size: medium;" href="default.html">
-                                    Página inicial</a>
-    
-                            </li>
-                            <li class="dropdown-item " style="background-color:black;" >
-                                <a class="dropdown-item"  style=" font-family: sans-serif; font-weight:300; background-color:black;text-decoration: none; color:white;font-size: medium;"  href="SobreNos.aspx">
-                                    Quem Somos</a>
-                      
-                            </li>
-                            <li class="dropdown-item " style="background-color:black;" >
-                                <a class="dropdown-item"  style=" font-family: sans-serif; font-weight:300; background-color:black;text-decoration: none; color:white;font-size: medium;"  href="Noticias.aspx">
-                                    Conteudo</a>
-                      
-                            </li>
-                            <li id="utilitarios" runat="server" class="dropdown-item" style="background-color:black;"   >
-                                 <a class="dropdown-item"  style=" font-family: sans-serif; font-weight:300; background-color:black;text-decoration: none; color:white;font-size: medium;"  href="CadNoticias.aspx">
-                                Conteudo Editor</a> 
-                                
-                            </li>
-                        </ul>                   
-                        <div style="float:inherit; margin-right:50px; ">
-                            <ul id="UserLogar" runat="server" class="navbar-nav mr-auto text-right "  >
-                                 <li class="nav-item dropdown ">
-                                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="text-decoration: none; color:white;font-size: medium; padding:0%; ">
-                                        <img src="img/User.png" style="width:45px; height:50px"/>
-                                     </a>
-                    
-                                     <div class="dropdown-menu" aria-labelledby="dropdown01" style=" color: white;text-align:center; position: page; background-color: rgb(45, 132, 119); padding:0px; float:left;  ">
-                                         <a class="dropdown-item" style="font-size:medium " href="cadastro2.html">Criar Conta</a>
-                                         <a class="dropdown-item" style="font-size:medium " href="login.html">Login</a>
-                                     </div>
-           
-                            </ul>
-                                 
-                        </div>
-                        
-                </div>
-                </div>
-           </header>
-    <form id="formExemplo" data-toggle="validator" role="form">
-    <div class="box-menu">
-       <h1>LOGIN</h1>
-        <input type="text" id="inputUsuario" placeholder="Usuário" runat="server" >
-        <div class="help-block with-errors"></div>
-        <input type="password"  id="inputPassword" placeholder="Digite sua Senha..."  
-        data-minlength="6" >
-        <div class="help-block with-errors"></div>
+        </div>
+    </header>
+    <form id="formExemplo" data-toggle="validator" role="form"
+        onsubmit=" return validateMyForm(); event.preventDefault();">
+        <div class="box-menu">
+            <h1>LOGIN</h1>
+            <input type="text" id="inputUsuario" placeholder="Usuário" runat="server">
+            <div class="help-block with-errors"></div>
+            <input type="password" id="inputPassword" placeholder="Digite sua Senha..." data-minlength="6">
+            <div class="help-block with-errors"></div>
             <div class="col-lg-12">
                 <a href="cadastro2.html" style="color: white;">Esqueceu a senha?</a>
                 <br>
-                <button ID="btnLogar" runat="server"  Class="btn btn-outline-info btn-destaque" Enabled ="true"   OnClick="validar()">Logar</button>
+                <button ID="btnLogar" runat="server" Class="btn btn-outline-info btn-destaque" Enabled="true"
+                    typpe="submit">
+                    Logar</button>
                 <br>
-                
-                <button ID="btnCadastrar" runat="server" Class="btn btn-outline-info btn-destaque" Enabled ="true" OnClick="btnCadastrar_Click" >Cadastrar</button>
-                  
-    </div>
-       
-       </div>
-    </form>
-       <div style="background-color:black; width: 100%; position: relative;display: block; text-align:center; padding-top:20px;" >
-                
-        <footer>
-           <div id="inf" class=" inf">
 
-            <p style="color:#ffffff">&copy; - Todos os Direitos reservados <br />
-                
-               <br />
-                
-             
-               
-               
-           </div>  
-                      </footer>
+                <button ID="btnCadastrar" runat="server" Class="btn btn-outline-info btn-destaque" Enabled="true"
+                    OnClick="btnCadastrar_Click">Cadastrar</button>
+
             </div>
+
+        </div>
+    </form>
+    <div
+        style="background-color:black; width: 100%; position: relative;display: block; text-align:center; padding-top:20px;">
+
+        <footer>
+            <div id="inf" class=" inf">
+
+                <p style="color:#ffffff">&copy; - Todos os Direitos reservados <br />
+
+                    <br />
+
+
+
+
+            </div>
+        </footer>
+    </div>
     <style>
+        .box-menu {
+            width: 600px;
+
+            border-radius: 45px;
+            padding: 100px;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 5%);
+            background: black;
+            text-align: center;
+            font-family: sans-serif;
+            margin-bottom: 50px;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        .box-menu h1 {
+            color: white;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .box-menu input[type="text"],
+        .box-menu input[type="password"] {
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid white;
+            padding: 14px 10px;
+            width: 200px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25s;
+        }
+
+        .box-menu input[type="text"]:focus,
+        .box-menu input[type="password"]:focus {
+            width: 400px;
+            border-color: rgb(23, 122, 101);
+
+        }
 
 
-   .box-menu{
-    width: 600px;
-    
-    border-radius: 45px;
-    padding: 100px;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 5%);
-    background: black;
-    text-align: center;
-    font-family: sans-serif;
-    margin-bottom:50px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-    .box-menu h1{
-    color: white;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-    .box-menu input[type = "text"], .box-menu input[type = "password"]{
-    border: 0;
-    background: none;
-    display:block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid white;
-    padding: 14px 10px;
-    width: 200px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25s;
-}
-
-.box-menu input[type = "text"]:focus, .box-menu input[type = "password"]:focus {
-     width: 400px;
-    border-color: rgb(23,122,101);
-        
-}
-
-
-.box-menu input[type = "submit"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin-top: 20px;
-    margin-left: 30%;
-    text-align: center;
-    border: 2px solid rgb(23,122,101);
-    padding: 14px 40px;
-    width: 200px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
-}
+        .box-menu input[type="submit"] {
+            border: 0;
+            background: none;
+            display: block;
+            margin-top: 20px;
+            margin-left: 30%;
+            text-align: center;
+            border: 2px solid rgb(23, 122, 101);
+            padding: 14px 40px;
+            width: 200px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
 
 
 
-.box-menu input[type = "submit"]:hover {
-    background: rgb(23,122,101);
-}
+        .box-menu input[type="submit"]:hover {
+            background: rgb(23, 122, 101);
+        }
     </style>
 </body>
+
 </html>

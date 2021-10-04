@@ -1,17 +1,4 @@
 
-.menu {
-    position: relative;
-    background-color:rgba(2,0,36,1);
-    height: 100px;
-    padding-bottom: 15px;
-    font-family: 'Zen Dots';
-    text-align: center;
-}
-.menu a {
-    text-decoration: none;
-    color: white;
-    
-}
 
 .btn-destaque {
     /* border: none; */
@@ -104,7 +91,7 @@ font-size: 15px;
     height: 500px;
     width:  500px;
     border-radius:32% 68% 44% 56% / 74% 51% 49% 26% ;
-    padding-bottom: 15px;
+    padding-bottom: 2rem;
     margin-left: 50px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.719);
 }
