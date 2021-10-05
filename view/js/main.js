@@ -74,7 +74,7 @@ function validateMyForm() {
 function Cadastro() {
     let a = document.createElement('a');
     a.target = '_blank';
-    a.href = '/view/cadastro2.html';
+    a.href = '/view/cadastroCliente.html';
     a.click();
     window.close()
 }
@@ -82,7 +82,7 @@ function Cadastro() {
 function Cadastro2() {
     let a = document.createElement('a');
     a.target = '_blank';
-    a.href = '/view/cadastro2.html';
+    a.href = '/view/cadastroCliente.html';
     a.click();
     window.close()
 }
