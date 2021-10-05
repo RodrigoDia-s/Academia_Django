@@ -21,6 +21,21 @@
 
   })()
 
+
+  function validateMyForm2() {
+    var registrogeral = document.getElementById('rg')
+    alert("registrogeral")
+    if(isNaN(registrogeral.value) )
+    {
+        alert("Somente números no campo telefone")
+        registrogeral.focus();
+        return false;
+    }
+
+    alert("Enviado");
+    return true;
+}
+
   function verificarCPF(c){
     var i;
     s = c;
@@ -60,3 +75,5 @@
         alert(c + "nCPF Válido")
     }
   }
+
+
