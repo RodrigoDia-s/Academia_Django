@@ -287,8 +287,25 @@
                         </div>
 
                         <hr class="my-4">
+                        
+                        <h4 class="mb-3">Senha</h4>
+                        <div class="col-md-4">
+                            <label for="password" class="form-label">Senha:</label>
+                            <input type="password" class="form-control" id="senha1" placeholder="" value="" required="">
+                            <div class="invalid-feedback">
+                                Digite uma senha.
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="password" class="form-label">Digite a mesma senha:</label>
+                            <input type="password" class="form-control" id="senha2" placeholder="" value="" required="">
+                            <div class="invalid-feedback">
+                                Digite uma senha.
+                            </div>
+                        </div>
+                        <hr class="my-4">
 
-                        <button class="w-50 btn btn-info btn-lg" type="submit">Continuar</button>
+                        <button class="w-50 btn btn-info btn-lg" type="submit"  onclick=" return VerificarSenha(); event.preventDefault(); Cadastro2();">Continuar</button>
                     </form>
                 </div>
             </div>
