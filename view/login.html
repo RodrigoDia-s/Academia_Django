@@ -46,15 +46,15 @@
                         <li class="dropdown-item " style="background-color:black;">
                             <a class="dropdown-item"
                                 style=" font-family: sans-serif; font-weight:300; background-color:black;text-decoration: none; color:white;font-size: medium;"
-                                href="SobreNos.aspx">
+                                href="/view/default.html">
                                 Quem Somos</a>
 
                         </li>
                         <li class="dropdown-item " style="background-color:black;">
                             <a class="dropdown-item"
                                 style=" font-family: sans-serif; font-weight:300; background-color:black;text-decoration: none; color:white;font-size: medium;"
-                                href="Noticias.aspx">
-                                Conteudo</a>
+                                href="/view/default.html">
+                                Planos</a>
 
                         </li>
                         <li id="utilitarios" runat="server" class="dropdown-item" style="background-color:black;">
@@ -76,7 +76,7 @@
 
                                 <div class="dropdown-menu" aria-labelledby="dropdown01"
                                     style=" color: white;text-align:center; position: page; background-color: rgb(45, 132, 119); padding:0px; float:left;  ">
-                                    <a class="dropdown-item" style="font-size:medium " href="cadastro2.html">Criar
+                                    <a class="dropdown-item" style="font-size:medium " href="cadastroCliente.html">Criar
                                         Conta</a>
                                     <a class="dropdown-item" style="font-size:medium " href="login.html">Login</a>
                                 </div>
@@ -92,19 +92,19 @@
         onsubmit=" return validateMyForm(); event.preventDefault();">
         <div class="box-menu">
             <h1>LOGIN</h1>
-            <input type="text" id="inputUsuario" placeholder="Usuário" runat="server">
+            <input type="text" id="inputUsuario" placeholder="CPF" runat="server" >
             <div class="help-block with-errors"></div>
             <input type="password" id="inputPassword" placeholder="Digite sua Senha..." data-minlength="6">
             <div class="help-block with-errors"></div>
             <div class="col-lg-12">
-                <a href="cadastro2.html" style="color: white;">Esqueceu a senha?</a>
+                <a href="cadastroCliente.html" style="color: white;">Esqueceu a senha?</a>
                 <br>
                 <button ID="btnLogar" runat="server" Class="btn btn-outline-info btn-destaque" Enabled="true"
                     typpe="submit">
                     Logar</button>
                 <br>
 
-                <a href="/view/cadastro2.html" class="btn btn-outline-info btn-destaque">Cadastrar</a>
+                <a href="/view/cadastroCliente.html" class="btn btn-outline-info btn-destaque">Cadastrar</a>
 
             </div>
 

@@ -12,11 +12,13 @@
     <link href="css/fontello.css" rel="stylesheet" />
     <link href="css/peticon.css" rel="stylesheet" />
     <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <script type="text/javascript" src="Scripts/ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="Scripts/ckeditor/config.js"></script>
     <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+    <script src="form-validation.js"></script>
 
     <title>Default</title>
 </head>
@@ -56,14 +58,14 @@
                             <li class="dropdown-item " style="background-color:black;">
                                 <a class="dropdown-item"
                                     style=" font-family: sans-serif; font-weight:300; background-color:black;text-decoration: none; color:white;font-size: medium;"
-                                    href="Noticias.aspx">
+                                    href="/view/default.html#Section">
                                     Planos</a>
 
                             </li>
                             <li id="utilitarios" runat="server" class="dropdown-item" style="background-color:black;">
                                 <a class="dropdown-item"
                                     style=" font-family: sans-serif; font-weight:300; background-color:black;text-decoration: none; color:white;font-size: medium;"
-                                    href="CadastroFunc.html">
+                                    href="cadastroFunc.html">
                                     Conteudo Editor</a>
 
                             </li>
@@ -79,7 +81,7 @@
 
                                     <div class="dropdown-menu" aria-labelledby="dropdown01"
                                         style=" color: white;text-align:center; position: page; background-color: rgb(45, 132, 119); padding:0px; float:left;  ">
-                                        <a class="dropdown-item" style="font-size:medium " href="cadastro2.html">Criar
+                                        <a class="dropdown-item" style="font-size:medium " href="cadastroCliente.html">Criar
                                             Conta</a>
                                         <a class="dropdown-item" style="font-size:medium " href="login.html">Login</a>
                                     </div>
@@ -96,10 +98,10 @@
                 <div class="py-5 text-center">
                     <h2>Cadastro de Funcionários</h2>
                 </div>
-    
+
                 <div class=" col-md-12 col-lg-auto">
                     <form class="needs-validation" id="formulario"
-                        onsubmit=" return validateMyForm(); event.preventDefault(); " >
+                        onsubmit=" return validateMyForm(); event.preventDefault(); ">
                         <div class="row g-lg-5">
                             <div class="col-12">
                                 <label for="nome" class="form-label">Nome</label>
@@ -108,51 +110,76 @@
                                     Insira seu nome completo.
                                 </div>
                             </div>
-    
-                            <div class="col-3">
-                                <label for="idade" class="form-label">Idade</label>
-                                <select class="form-select" id="idade" required="">
-                                    <option value=""></option>
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                    <option value="13">13</option>
-                                    <option value="14">14</option>
-                                    <option value="15">15</option>
-                                    <option value="16">16</option>
-                                    <option value="17">17</option>
-                                    <option value="18">18</option>
-                                    <option value="19">19</option>
-                                    <option value="20">20</option>
-                                    <option value="20+">20+</option>
-                                </select>
+
+                            <div class="col-md-4">
+                                <label for="data" class="form-label">Data de Nascimento</label>
+                                <input type="date" class="form-control" id="data" placeholder="" value="" required="">
+                                <div class="invalid-feedback">
+                                    Insira sua data de nascimento.
+                                </div>
                             </div>
-    
-    
+
+                            <div class="col-md-4">
+                                <label for="rg" class="form-label">RG</label>
+                                <input type="text" class="form-control" id="rg" placeholder="ex: 00.000.000-0" value=""
+                                    required="">
+                                <div class="invalid-feedback">
+                                    Insira um RG válido.
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="cpf" class="form-label">CPF</label>
+                                <input type="text" class="form-control" id="cpf" placeholder="ex: 000.000.000-00"
+                                    value="" required="" onblur="return verificarCPF(this.value)">
+                                <div class="invalid-feedback">
+                                    Insira um CPF válido.
+                                </div>
+                            </div>
+
+
                             <div class="col-md-4">
                                 <label for="telefone" class="form-label">Telefone</label>
-                                <input type="tel" class="form-control" id="txtTelefone" placeholder="+55 (00) 00000-0000"
-                                    value="" required="">
+                                <input type="tel" class="form-control" id="txtTelefone"
+                                    placeholder="+55 (00) 00000-0000" value="" required="">
                                 <div class="invalid-feedback">
                                     Insira seu telefone.
                                 </div>
                             </div>
-    
-                            <div class="col-12">
-    
+
+                            <div class="col-md-4" style="margin-top: 30px; ">
+                                <label for="cargo" class="form-label">Cargo</label>
+                                <select class="form-select" id="cargo" required="">
+                                    <option value=""></option>
+                                    <option value="professor">Professor</option>
+                                    <option value="recepcionista">Recepcionista</option>
+                                    <option value="estoquista">Estoquista</option>
+                                    <option value="limpeza">Limpeza</option>
+                                    <option value="nutricionista">Nutricionista</option>
+                                </select>
                             </div>
-    
-                            <div class="col-12">
+
+
+                            <div class="col-10" style="margin-top: 30px; ">
+                                <label for="genero" class="form-label">Gênero</label>
+                                <select class="form-select" id="genero" required="">
+                                    <option value=""></option>
+                                    <option value="fem">Feminino</option>
+                                    <option value="masc">Maculino</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="seuemail@examplo.com"
+                                    value="" required="">
+                                <div class="invalid-feedback">
+                                    Insira um email válido.
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
                                 <label for="address" class="form-label">Endereço</label>
                                 <input type="text" class="form-control" id="endereco" placeholder="Rua das Graças"
                                     required="">
@@ -160,14 +187,14 @@
                                     Insira seu endereço.
                                 </div>
                             </div>
-    
+
                             <div class="col-12">
                                 <label for="address2" class="form-label">Complemento <span
                                         class="text-muted">(Opcional)</span></label>
                                 <input type="text" class="form-control" id="complemento"
                                     placeholder="Numero da Casa ou Apartamento">
                             </div>
-    
+
                             <div class="col-md-4">
                                 <label for="state" class="form-label">Estado</label>
                                 <input type="text" class="form-control" id="Estado" placeholder="SP " required="">
@@ -175,7 +202,7 @@
                                     Por favor insira um Estado válido
                                 </div>
                             </div>
-    
+
                             <div class="col-md-4">
                                 <label for="state" class="form-label">Cidade</label>
                                 <input type="text" class="form-control" id="cidade" placeholder="Barueri " required="">
@@ -183,7 +210,7 @@
                                     Por favor insira uma cidade válida.
                                 </div>
                             </div>
-    
+
                             <div class="col-md-3">
                                 <label for="zip" class="form-label">CEP</label>
                                 <input type="text" class="form-control" id="cep" placeholder="00000-000" required="">
@@ -192,17 +219,35 @@
                                 </div>
                             </div>
                         </div>
-    
-    
-    
-    
+
+
                         <hr class="my-4">
-    
+
+                        <h4 class="mb-3">Senha</h4>
+                        <div class="col-md-4">
+                            <label for="password" class="form-label">Senha:</label>
+                            <input type="password" class="form-control" id="senha3" placeholder="" value="" required="">
+                            <div class="invalid-feedback">
+                                Digite uma senha.
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="password" class="form-label">Digite a mesma senha:</label>
+                            <input type="password" class="form-control" id="senha4" placeholder="" value="" required="">
+                            <div class="invalid-feedback">
+                                Digite uma senha.
+                            </div>
+                        </div>
+                        <hr class="my-4">
+
+
+                        <hr class="my-4">
+
                         <div class="row g-lg-100">
                             <div class="col-6">
-                                <button class="w-50 btn btn-info btn-lg" type="submit" id="cadastrar">Enviar</button>
+                                <button class="w-50 btn btn-info btn-lg" type="submit" id="cadastrar"  onclick=" return VerificarSenha2(); event.preventDefault();">Enviar</button>
                             </div>
-    
+
                             <div class="col-6">
                                 <button class="w-50 btn btn-danger btn-lg" type="reset" id="cadastrar">Limpar</button>
                             </div>
@@ -210,40 +255,40 @@
                     </form>
                 </div>
             </main>
-    
-            <footer class="my-5 pt-5 text-muted text-center text-small">
-                <p class="mb-1">© 2017–2021 Company Name</p>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#">Privacy</a></li>
-                    <li class="list-inline-item"><a href="#">Terms</a></li>
-                    <li class="list-inline-item"><a href="#">Support</a></li>
-                </ul>
+
+
+        </div>
+        <hr />
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+
+        <div
+            style="background-color:black; width: 100%; position: relative;display: block; text-align:center; padding-top:20px;">
+
+            <footer>
+                <div id="inf" class=" inf">
+
+                    <p style="color:#ffffff">&copy; - Todos os Direitos reservados <br />
+
+                        <br />
+
+
+
+
+                </div>
             </footer>
         </div>
-            <hr />
-            <script src="js/popper.min.js"></script>
-            <script src="js/bootstrap.js"></script>
-         
-            <div
-                style="background-color:black; width: 100%; position: relative;display: block; text-align:center; padding-top:20px;">
-
-                <footer>
-                    <div id="inf" class=" inf">
-
-                        <p style="color:#ffffff">&copy; - Todos os Direitos reservados <br />
-
-                            <br />
-
-
-
-
-                    </div>
-                </footer>
-            </div>
 
 
     </form>
 
+    <script>
+        $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        })
+        </script>
+        
+       
 </body>
 
 </html>
