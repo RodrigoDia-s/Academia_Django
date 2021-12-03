@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 3rd party
-    # My apps
-    'pages.PagesConfig'
+    # 3rd Party
+    # Local Apps
+    'pages.apps.PagesConfig'
 ]
 
 MIDDLEWARE = [
