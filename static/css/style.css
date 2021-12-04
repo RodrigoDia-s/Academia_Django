@@ -1,10 +1,71 @@
-.header {
-    background-color : black; 
-    position: static; 
-    border-radius:unset;
-    margin:0px;
+@font-face {
+	font-family: "proxima_nova_rgregular";
+	src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot');
+	src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff') format('woff'),
+		 url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf') format('truetype'),
+		 url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: 900;
+	font-style: normal;
 }
 
-.dropdown-items {
+html {
+    font-family: "proxima_nova_rgregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: large;
+}
+
+.header {
+    background-color : black; 
+    position: relative; 
+    border-radius:unset;
+    margin:0px;
+   
+}
+
+
+.menu {
+    display:flex; 
+    justify-content:space-around;
+}
+
+.menu a {
+    font-family: "proxima_nova_rgregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 900; 
+    background-color :black; 
+    text-decoration: none;
+    color:white; 
+    font-size: x-large;
+}
+
+.menu ul li{
+    padding: 1.9rem;
+}
+
+
+#UserLogar {
+    margin-right: 5rem;
+    background-color: black;
     
 }
+#UserLogar img{
+    height: 50px;
+    width: 50px;
+    
+}
+
+.dmenu {
+    text-align:center; 
+    padding:0px; 
+    float:left;
+    background-color: rgba(0, 0, 0, 0.602)
+
+}
+
+.dmenu a{
+    color: #ffffff;
+}
+
+.footer2 {
+  background-color: #ffffff;
+}
+
