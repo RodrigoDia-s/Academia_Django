@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 3rd Party
     # Local Apps
-    'pages.apps.PagesConfig',
+    'paginas.apps.PaginasConfig',
     'planos.apps.PlanosConfig',
 ]
 
