@@ -40,12 +40,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 3rd Party
+    'crispy_forms',
     # Local Apps
     'paginas.apps.PaginasConfig',
     'planos.apps.PlanosConfig',
     'carrinho.apps.CarrinhoConfig',
     'pedidos.apps.PedidosConfig',
     'payments.apps.PaymentsConfig',
+    
 ]
 
 MIDDLEWARE = [
