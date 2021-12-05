@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
-
 {% load static %}
-
+{% load plano_tags %}
 {% block title %}Página Inicial{% endblock %}
 
 {% block conteudo %}
@@ -16,13 +15,13 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="fundo">
-                
+
                 </div>
 
             </div>
             <div class="carousel-item">
                 <div class="fundo">
-                
+
                 </div>
             </div>
             <div class="carousel-item">
@@ -41,66 +40,41 @@
     <hr />
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
+
+
+
+
     <div class="container py-3 " id="testte">
+        <h1>Planos</h1>
+        <hr />
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            {% if plano_list %}
+
+            {% for Plano in plano_list %}
             <div class="col">
+
                 <div class="card mb-4 rounded-3 shadow-sm border-dark">
                     <div class="card-header py-3 text-white bg-dark border-dark">
-                        <h4 class="my-0 fw-normal">{{ plano.nome }}</h4>
+                        <h4 class="my-0 fw-normal">{{ Plano.nome }}</h4>
                     </div>
                     <div class="card-body">
-                        <p>{{ plano.descricao }}</p>
-                        <h1 class="card-title pricing-card-title">{{ plano.preco }}<small
+                        <p>{{ Plano.descricao }}</p>
+                        <h1 class="card-title pricing-card-title">{{ Plano.preco }}<small
                                 class="text-muted fw-light">/mês</small>
                         </h1>
 
                         {% csrf_token %}
-                
-                    <input class="btn btn-success" type="submit" value="Adicionar ao Carrinho">
+
+                        <input class="btn btn-outline-success" type="submit" value="Assinar">
                     </div>
                 </div>
 
             </div>
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm border-dark">
-                    <div class="card-header py-3 text-white bg-dark border-dark">
-                        <h4 class="my-0 fw-normal">PLANO LIGHT</h4>
-                    </div>
-                    <div class="card-body">
-                        <p>Ingresse agora no nosso plano light e desfrute do melhor de nossa academia economizando
-                            MUITOOOOOOO</p>
-                        <h1 class="card-title pricing-card-title">R$ 59,90<small
-                                class="text-muted fw-light">/mês</small>
-                        </h1>
+            {% endfor %}
+            {% endif %}
 
-                        <a href="cadastro">
-                            <button type="button" class="w-100 btn btn-lg btn-outline-success">Assinar</button>
-
-
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm border-dark">
-                    <div class="card-header py-3 text-white bg-dark border-dark">
-                        <h4 class="my-0 fw-normal">PLANO LIGHT</h4>
-                    </div>
-                    <div class="card-body">
-                        <p>Ingresse agora no nosso plano light e desfrute do melhor de nossa academia economizando
-                            MUITOOOOOOO</p>
-                        <h1 class="card-title pricing-card-title">R$ 59,90<small
-                                class="text-muted fw-light">/mês</small>
-                        </h1>
-                        <a href="/view/cadastroCliente.html">
-                            <button type="button" class="w-100 btn btn-lg btn-outline-success">Assinar</button>
-
-
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
-    {% endblock %}
+
+
+    {% endblock conteudo %}

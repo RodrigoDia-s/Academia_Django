@@ -1,32 +1,20 @@
-from django.shortcuts import get_object_or_404
+from django.http import request
+from django.shortcuts import get_object_or_404, render
+from django.views import generic
 from django.views.generic import DetailView, ListView
 
-from carrinho.forms import CartAddProductForm
 
 from .models import Plano
 
 
-class PlanoDetailView(DetailView):
-    queryset = Plano.available.all()
-    extra_context = {"form": CartAddProductForm()}
-
-
-class ProductListView(ListView):
-    category = None
+class PlanoListView(generic.ListView):
+    model = Plano
     paginate_by = 6
-
-    def get_queryset(self):
-        queryset = Product.available.all()
-
-        category_slug = self.kwargs.get("slug")
-        if category_slug:
-            self.category = get_object_or_404(Category, slug=category_slug)
-            queryset = queryset.filter(category=self.category)
-
-        return queryset
-
+    queryset = planos = Plano.objects.all()
+   
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["category"] = self.category
-        context["categories"] = Category.objects.all()
+        # Call the base implementation first to get the context
+        context = super(PlanoListView, self).get_context_data(**kwargs)
+        # Create any data and add it to the context
+        context['some_data'] = 'This is just some data'
         return context

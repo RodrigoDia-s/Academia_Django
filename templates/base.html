@@ -36,7 +36,16 @@
                 <ul class="navbar-nav mr-auto">
                     
                     {% if user.is_authenticated %}
-                    <li id="utilitarios" runat="server" class="dropdown-item">
+                    <li class="navbar navbar-dark ">
+                        <a href="{% url 'home'%}">Página inicial</a>
+
+                    </li>
+                    <li class="navbar navbar-dark" >
+                        <a href="{% url 'sobre'}">
+                            Quem Somos</a>
+
+                    </li>
+                    <li id="utilitarios" runat="server" class="navbar navbar-dark">
                         <a href='accounts/logout'>
                             Sair</a>
                     </li>
@@ -45,7 +54,7 @@
                         <a href="{% url 'home'%}">Página inicial</a>
 
                     </li>
-                    <li class="navbar navbar-dark">
+                    <li class="navbar navbar-dark" >
                         <a href="{% url 'sobre'}">
                             Quem Somos</a>
 
