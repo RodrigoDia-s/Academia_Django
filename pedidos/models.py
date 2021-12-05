@@ -32,7 +32,7 @@ class Order(TimeStampedModel):
 
     def get_description(self):
         return ", ".join(
-            [f"{item.quantity}x {item.product.name}" for item in self.items.all()]
+            [f"{item.quantity}x {item.plano.name}" for item in self.items.all()]
         )
 
 

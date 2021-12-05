@@ -7,7 +7,7 @@ from .models import Item, Order
 
 class ItemInline(admin.TabularInline):
     model = Item
-    raw_id_fields = ["product"]
+    raw_id_fields = ["plano"]
     extra = 0
 
 

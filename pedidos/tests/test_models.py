@@ -5,7 +5,7 @@ from .factories import ItemFactory
 pytestmark = pytest.mark.django_db
 
 
-def test___str__(product, order, item):
+def test___str__(plano, order, item):
     assert order.__str__() == f"Pedido {order.id}"
     assert str(order) == f"Pedido {order.id}"
 
@@ -24,7 +24,7 @@ def test_order_get_total_price(order):
 
 def test_order_get_description(order):
     item = ItemFactory(order=order, quantity=2)
-    assert order.get_description() == f"2x {item.product.name}"
+    assert order.get_description() == f"2x {item.plano.name}"
 
 
 def test_item_get_total_price():

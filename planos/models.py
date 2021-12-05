@@ -21,7 +21,7 @@ class Plano(TimeStampedModel):
         verbose_name_plural = "planos"
     
     def __str__(self):
-        return self.name
+        return self.nome
 
     #def get_absolute_url(self):
-        return reverse("products:list_by_category", kwargs={"slug": self.slug})
+        return reverse("planos:list_by_category", kwargs={"slug": self.slug})

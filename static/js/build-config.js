@@ -77,7 +77,7 @@ var CKBUILDER_CONFIG = {
 		'removeformat' : 1,
 		'resize' : 1,
 		'scayt' : 1,
-		'showborders' : 1,
+		'showbpedidos' : 1,
 		'sourcearea' : 1,
 		'specialchar' : 1,
 		'stylescombo' : 1,

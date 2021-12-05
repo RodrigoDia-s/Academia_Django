@@ -1,6 +1,6 @@
 import factory
 
-from products.tests.factories import ProductFactory
+from planos.tests.factories import planoFactory
 
 from ..models import Item, Order
 
@@ -22,7 +22,7 @@ class OrderFactory(factory.django.DjangoModelFactory):
 
 class ItemFactory(factory.django.DjangoModelFactory):
     order = factory.SubFactory(OrderFactory)
-    product = factory.SubFactory(ProductFactory)
+    plano = factory.SubFactory(planoFactory)
     price = factory.Faker("pydecimal", right_digits=2, min_value=5.0, max_value=999.0)
     quantity = factory.Faker("random_int", min=1, max=10)
 

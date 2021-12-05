@@ -46,20 +46,17 @@
             <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm border-dark">
                     <div class="card-header py-3 text-white bg-dark border-dark">
-                        <h4 class="my-0 fw-normal">PLANO LIGHT</h4>
+                        <h4 class="my-0 fw-normal">{{ plano.nome }}</h4>
                     </div>
                     <div class="card-body">
-                        <p>Ingresse agora no nosso plano light<br> e desfrute do melhor de nossa academia economizando
-                            MUITOOOOOOO</p>
-                        <h1 class="card-title pricing-card-title">R$ 59,90<small
+                        <p>{{ plano.descricao }}</p>
+                        <h1 class="card-title pricing-card-title">{{ plano.preco }}<small
                                 class="text-muted fw-light">/mês</small>
                         </h1>
 
-                        <a href="/view/cadastroCliente.html">
-                            <button type="button" class="w-100 btn btn-lg btn-outline-success">Assinar</button>
-
-
-                        </a>
+                        {% csrf_token %}
+                
+                    <input class="btn btn-success" type="submit" value="Adicionar ao Carrinho">
                     </div>
                 </div>
 
