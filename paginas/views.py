@@ -8,3 +8,6 @@ class HomePageView(TemplateView):
     
 def cadastroc(request):
     return render(request, "cadastroCliente.html")
+
+def quemSomos(request):
+    return render(request, "quemSomos.html")
