@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     # Local Apps
     'paginas.apps.PaginasConfig',
     'planos.apps.PlanosConfig',
+    'carrinho.apps.CarrinhoConfig',
+    'pedidos.apps.PedidosConfig',
 ]
 
 MIDDLEWARE = [
@@ -80,9 +82,13 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "webproject",
+        "USER": "postgres",
+        "PASSWORD": "123456",
+        "HOST": "localhost",
+        "PORT": 5432,
     }
 }
 
