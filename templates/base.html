@@ -13,38 +13,56 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!--CSS-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/animation.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/design.css' %}" />
 
 </head>
 
 <body>
     {% block header %}
     <nav class="navbar navbar-expand-md navbar-dark fixed-top header container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="default.html">
-                <img src="{% static 'img/Logo.png' %}" alt='Bem vindo' class="logo" />
+        <div class="nav navbar-nav pull-sm-left">
+            <a href="{% url 'home'%}">
+                <div class="div-group">
+                    <div class="div1" id="one"></div>
+                    <div class="div1" id="two"></div>
+                    <div class="div2" id="three"></div>
+                    <div class="div2" id="four"></div>
+                </div>
             </a>
         </div>
         <div class="menu container-fluid">
-            <div class="collapse navbar-collapse">
+            <div class="nav navbar-nav navbar-logo mx-auto">
                 <ul class="navbar-nav mr-auto">
+                    
+                    {% if user.is_authenticated %}
                     <li class="navbar navbar-dark ">
-                        <a href="default.html">Página inicial</a>
+                        <a href="{% url 'home'%}">Página inicial</a>
 
                     </li>
-                    <li class="navbar navbar-dark">
-                        <a href="SobreNos.aspx">
+                    <li class="navbar navbar-dark" >
+                        <a href="{% url 'sobre'}">
+                            Quem Somos</a>
+
+                    </li>
+                    <li id="utilitarios" runat="server" class="navbar navbar-dark">
+                        <a href='accounts/logout'>
+                            Sair</a>
+                    </li>
+                    {% else%}
+                    <li class="navbar navbar-dark ">
+                        <a href="{% url 'home'%}">Página inicial</a>
+
+                    </li>
+                    <li class="navbar navbar-dark" >
+                        <a href="{% url 'sobre'}">
                             Quem Somos</a>
 
                     </li>
                     <li class="navbar navbar-dark">
-                        <a href="#Section">
+                        <a href="{% url 'home'%}#testte">
                             Planos</a>
 
-                    </li>
-                    {% if user.is_authenticated %}
-                    <li id="utilitarios" runat="server" class="dropdown-item">
-                        <a href="cadastroFunc.html">
-                            Conteudo Editor</a>
                     </li>
                     {% endif %}
                 </ul>
@@ -59,9 +77,9 @@
                 </a>
 
                 <div class="dropdown-menu dmenu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="cadastroCliente.html">Criar
-                        Conta</a>
-                    <a class="dropdown-item" href="login.html">Login</a>
+                    <a class="dropdown-item" href="cadastro">
+                        Criar Conta</a>
+                    <a class="dropdown-item" href="{% url 'login' %}">Login</a>
                 </div>
         </ul>
     </nav>
@@ -71,10 +89,10 @@
     {% endblock %}
 
     {% block footer %}
-    <div class="container footer navbar-fixed-bottom">
+    <div class="bd-footer py-3 mt-3 footer">
         <footer>
-                <p >&copy; - Todos os Direitos reservados <br />
-                    <br />
+            <p>&copy; - Todos os Direitos reservados <br />
+                <br />
         </footer>
     </div>
     {% endblock %}

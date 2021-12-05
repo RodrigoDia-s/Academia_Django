@@ -1688,16 +1688,16 @@ function includeScroll(rect, element) {
 }
 
 /*
- * Helper to detect borders of a given element
+ * Helper to detect bpedidos of a given element
  * @method
  * @memberof Popper.Utils
  * @param {CSSStyleDeclaration} styles
  * Result of `getStyleComputedProperty` on the given element
  * @param {String} axis - `x` or `y`
- * @return {number} borders - The borders size of the given axis
+ * @return {number} bpedidos - The bpedidos size of the given axis
  */
 
-function getBordersSize(styles, axis) {
+function getBpedidosSize(styles, axis) {
   var sideA = axis === 'x' ? 'Left' : 'Top';
   var sideB = sideA === 'Left' ? 'Right' : 'Bottom';
 
@@ -1851,8 +1851,8 @@ function getBoundingClientRect(element) {
   // we make this check conditional for performance reasons
   if (horizScrollbar || vertScrollbar) {
     var styles = getStyleComputedProperty(element);
-    horizScrollbar -= getBordersSize(styles, 'x');
-    vertScrollbar -= getBordersSize(styles, 'y');
+    horizScrollbar -= getBpedidosSize(styles, 'x');
+    vertScrollbar -= getBpedidosSize(styles, 'y');
 
     result.width -= horizScrollbar;
     result.height -= vertScrollbar;
@@ -2730,8 +2730,8 @@ function arrow(data, options) {
   // take popper margin in account because we don't have this info available
   var css = getStyleComputedProperty(data.instance.popper);
   var popperMarginSide = parseFloat(css['margin' + sideCapitalized], 10);
-  var popperBorderSide = parseFloat(css['border' + sideCapitalized + 'Width'], 10);
-  var sideValue = center - data.offsets.popper[side] - popperMarginSide - popperBorderSide;
+  var popperBpedidoside = parseFloat(css['border' + sideCapitalized + 'Width'], 10);
+  var sideValue = center - data.offsets.popper[side] - popperMarginSide - popperBpedidoside;
 
   // prevent arrowElement from being placed not contiguously to its popper
   sideValue = Math.max(Math.min(popper[len] - arrowElementSize, sideValue), 0);
