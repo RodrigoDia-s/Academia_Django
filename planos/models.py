@@ -10,16 +10,18 @@ class AvailableManager(models.Manager):
     
 
 class Plano(TimeStampedModel):
-    name = models.CharField(max_length=255, unique=True)
-    slug = AutoSlugField(unique=True, always_update=False, populate_from="name")
-    description = models.TextField(blank=True)
-    
+    nome = models.CharField(max_length=255, unique=True)
+    slug = AutoSlugField(unique=True, always_update=False, populate_from="nome")
+    preco = models.DecimalField(max_digits=10, decimal_places=2) 
+    descricao = models.TextField(blank=True)
+    objects = models.Manager()
+        
     class Meta:
         verbose_name = "plano"
         verbose_name_plural = "planos"
     
     def __str__(self):
-        return self.name
+        return self.nome
 
     #def get_absolute_url(self):
-        return reverse("products:list_by_category", kwargs={"slug": self.slug})
+        return reverse("planos:list_by_category", kwargs={"slug": self.slug})

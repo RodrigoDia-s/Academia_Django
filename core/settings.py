@@ -17,13 +17,13 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
+# Quick-start development settings - unsuitable for planoion
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# SECURITY WARNING: keep the secret key used in planoion secret!
 SECRET_KEY = 'django-insecure-iah04+%z8#p*_qht24t659$rugkgfttget#lsshw9&_hghw-l$'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# SECURITY WARNING: don't run with debug turned on in planoion!
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     # Local Apps
     'paginas.apps.PaginasConfig',
     'planos.apps.PlanosConfig',
+    'carrinho.apps.CarrinhoConfig',
+    'pedidos.apps.PedidosConfig',
+    'payments.apps.PaymentsConfig',
 ]
 
 MIDDLEWARE = [
@@ -80,9 +83,13 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "webproject",
+        "USER": "postgres",
+        "PASSWORD": "123456",
+        "HOST": "localhost",
+        "PORT": 5432,
     }
 }
 
@@ -136,3 +143,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/'
 
 LOGOUT_REDIRECT_URL = '/accounts/login'
+
+
+# Cart
+
+CART_SESSION_ID = "carrinho"
+CART_ITEM_MAX_QUANTITY = 1
