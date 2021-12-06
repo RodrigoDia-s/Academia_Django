@@ -32,18 +32,23 @@
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col">
-                                {% render_field item.update_quantity_form.quantity class+="form-control" %}
+                              
                             </div>
                             <div class="col">
                                 <input class="btn btn-info" type="submit" value="Atualizar">
                             </div>
                         </div>
-                        {{ item.update_quantity_form.override }}
+                        
                     </form>
                 </td>
                 <td class="align-middle">R$ {{ item.preco }}</td>>
                 <td class="align-middle text-right">
                 </td>
+                
+        <form action="{% url 'cart:remove' plano.id %}" method="post">
+            {% csrf_token %}
+            <input class="btn btn-danger" type="submit" value="Remover">
+        </form>
             </tr>
             {% endwith %}
             {% endfor %}
@@ -61,7 +66,6 @@
     {% endif %}
     <p class="text-right">
        
-
         <a class="btn btn-success {% if not cart %}disabled{% endif %}" href="{% url 'pedidos:create' %}">
             Finalizar compra
         </a>

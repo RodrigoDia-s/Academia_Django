@@ -15,13 +15,14 @@ class OrderCreateView(CreateView):
     def form_valid(self, form):
         cart = Cart(self.request)
         if cart:
+            cart.clear()
             order = form.save()
             for item in cart:
                 Item.objects.create(
                     order=order,
                     plano=item["Plano"],
                     price=item["preco"],
-                    quantity=1,
+                   quantity = 1
                 )
             cart.clear()
             self.request.session["order_id"] = order.id
