@@ -1,29 +1,33 @@
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views.decorators.http import require_POST
 
-from planos.models import Plano
+from planos.models import Plano 
 
 from .carrinho import Cart
-from pedidos.models import Order
-from .forms import CartAddplanoForm
+from .forms import CartAddPlanoForm
 
 
 @require_POST
 def cart_add(request, plano_id):
     cart = Cart(request)
-    pedidos = Order(request)
     plano = get_object_or_404(Plano, id=plano_id)
 
-    form = CartAddplanoForm(request.POST)
-    if form.is_valid():
-        cd = form.cleaned_data
-        cart.add(
-            plano=plano, quantity=cd["quantity"], override_quantity=cd["override"] # VER NO VIDEO O QUE É OVERRIDE
-        )
+    
+    cart.add(
+        plano=plano
+    )
 
-    return redirect("carrinho:detail") # MUDAR PARA RETORNAR PARA PAGINA DE CHECKOUT
+    return redirect("cart:detail")
+
+
+@require_POST
+def cart_remove(request, product_id):
+    cart = Cart(request)
+    product = get_object_or_404(Plano, id=product_id)
+    cart.remove(product)
+    return redirect("cart:detail")
 
 
 def cart_detail(request):
     cart = Cart(request)
-    return render(request, "pedidos/order_form.html", {"cart": cart})
+    return render(request, "planos/plano_detail.html", {"cart": cart})

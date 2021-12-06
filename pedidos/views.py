@@ -18,10 +18,10 @@ class OrderCreateView(CreateView):
             order = form.save()
             for item in cart:
                 Item.objects.create(
-                    pedido=order,
-                    plano=item["plano"],
+                    order=order,
+                    plano=item["Plano"],
                     price=item["preco"],
-                    quantity=item["quantidade"],
+                    quantity=1,
                 )
             cart.clear()
             self.request.session["order_id"] = order.id
@@ -30,5 +30,5 @@ class OrderCreateView(CreateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["carrinho"] = Cart(self.request)
+        context["cart"] = Cart(self.request)
         return context

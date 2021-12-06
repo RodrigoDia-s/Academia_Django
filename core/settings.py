@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 3rd Party
     'crispy_forms',
+    'widget_tweaks',
     # Local Apps
     'paginas.apps.PaginasConfig',
     'planos.apps.PlanosConfig',
