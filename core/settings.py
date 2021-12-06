@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+import environ
 
 from pathlib import Path
 
@@ -52,7 +53,7 @@ INSTALLED_APPS = [
     'planos.apps.PlanosConfig',
     'carrinho.apps.CarrinhoConfig',
     'pedidos.apps.PedidosConfig',
-    'payments.apps.PaymentsConfig',
+    'pagamentos.apps.PagamentosConfig',
     
 ]
 
@@ -180,3 +181,10 @@ ACCOUNT_UNIQUE_EMAIL = True
 # Crispy
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+# Mercado Pago
+
+env = environ.Env()
+env.read_env(str(BASE_DIR / ".env"))
+MERCADO_PAGO_PUBLIC_KEY = env("MERCADO_PAGO_PUBLIC_KEY")
+MERCADO_PAGO_ACCESS_TOKEN = env("MERCADO_PAGO_ACCESS_TOKEN")

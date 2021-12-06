@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from payments.models import Payment
+from pagamentos.models import Payment
 
 from .models import Item, Order
 
