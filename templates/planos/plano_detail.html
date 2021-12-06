@@ -24,7 +24,7 @@
             <tr>
                 <td class="align-middle">
                     <a target="_blank" class="text-decoration-none" href="{{ Plano.get_absolute_url }}">
-                        {{plano.name }}
+                        {{item.name }}
                     </a>
                 </td>
                 <td class="align-middle">
@@ -32,44 +32,42 @@
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col">
-                              
+
                             </div>
-                            <div class="col">
-                                <input class="btn btn-info" type="submit" value="Atualizar">
-                            </div>
-                        </div>
-                        
-                    </form>
-                </td>
                 <td class="align-middle">R$ {{ item.preco }}</td>>
                 <td class="align-middle text-right">
-                </td>
-                
-        <form action="{% url 'cart:remove' plano.id %}" method="post">
-            {% csrf_token %}
-            <input class="btn btn-danger" type="submit" value="Remover">
-        </form>
-            </tr>
-            {% endwith %}
-            {% endfor %}
-            <tr class="bg-light">
-                <td class="font-weight-bold">Total</td>
-                <td></td>
-                <td></td>
-                <td class="font-weight-bold">R$ {{ cart.get_total_price }}</td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-    {% else %}
-    <p>O carrinho está vazio!</p>
-    {% endif %}
-    <p class="text-right">
-       
-        <a class="btn btn-success {% if not cart %}disabled{% endif %}" href="{% url 'pedidos:create' %}">
-            Finalizar compra
-        </a>
-    </p>
+</div>
+
+</form>
+</td>
+
+</td>
+
+<form action="{% url 'cart:remove' plano.id %}" method="post">
+    {% csrf_token %}
+    <input class="btn btn-danger" type="submit" value="Remover">
+</form>
+</tr>
+{% endwith %}
+{% endfor %}
+<tr class="bg-light">
+    <td class="font-weight-bold">Total</td>
+    <td></td>
+    <td></td>
+    <td class="font-weight-bold">R$ {{ cart.get_total_price }}</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+{% else %}
+<p>O carrinho está vazio!</p>
+{% endif %}
+<p class="text-right">
+
+    <a class="btn btn-success {% if not cart %}disabled{% endif %}" href="{% url 'pedidos:create' %}">
+        Finalizar compra
+    </a>
+</p>
 </div>
 
 {% endblock conteudo %}

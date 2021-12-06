@@ -19,6 +19,11 @@
     text-transform: uppercase;
     font-weight: 500;
 }
+.box h3{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
 .box input[type = "text"], .box input[type = "password"]{
     border: 0;
     background: none;
@@ -39,6 +44,8 @@
     border-color: rgb(23,122,101);
         
 }
+
+
 .box input[type = "submit"] {
     border: 0;
     background: none;

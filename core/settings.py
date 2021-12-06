@@ -40,13 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites'
+    'django.contrib.sites',
     # 3rd Party
     'crispy_forms',
     'widget_tweaks',
-    'allauth'
+    'allauth',
     'allauth.account',
-    'allauth.socialaccount'
+    'allauth.socialaccount',
     # Local Apps
     'paginas.apps.PaginasConfig',
     'planos.apps.PlanosConfig',
@@ -152,6 +152,7 @@ LOGIN_REDIRECT_URL = '/'
 
 LOGOUT_REDIRECT_URL = '/accounts/login'
 
+ACCOUNT_SESSION_REMEMBER = True
 
 # Cart
 
@@ -162,8 +163,20 @@ CART_ITEM_MAX_QUANTITY = 1
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend'
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 
+
 SITE_ID = 1
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+LOGIN_REDIRECT_URL = "/"
+ACCOUNT_SESSION_REMEMBER = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = "email"
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_UNIQUE_EMAIL = True
+
+# Crispy
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
