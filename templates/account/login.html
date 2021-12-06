@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %}LOGIN{% endblock %}
+
+{% block conteudo %}
+<form id="formExemplo" role="form" method="post">
+    <div class="box-menu">
+        <h1>LOGIN</h1>
+        {% csrf_token %}
+        {{ form|crispy }}
+            <button ID="btnLogar" Class="btn btn-outline-info btn-destaque" Enabled="true"
+                typpe="submit">
+                Logar</button>
+            <br>
+
+
+
+        </div>
+
+    </div>
+</form>
+{% endblock %}

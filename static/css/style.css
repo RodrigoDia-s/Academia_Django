@@ -79,3 +79,8 @@ html {
     background-color: #44056B;
 }
 
+.legenda {
+    font-family: "proxima_nova_rgregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 3px 3px 4px black;
+}
+
