@@ -9,6 +9,12 @@
 	font-style: normal;
 }
 
+
+#Academia div img{
+    width: 50%;
+    height: 50%;
+}
+
 html {
     font-family: "proxima_nova_rgregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: large;

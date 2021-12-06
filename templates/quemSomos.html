@@ -1,11 +1,25 @@
 {% extends 'base.html' %}
-
 {% load static %}
-
-{% block title %}Quem somos{% endblock %}
+{% load plano_tags %}
+{% block title %}Página Inicial{% endblock %}
 
 {% block conteudo %}
+
 <div class="container">
-<h1> Academia das Maravilhas</h1>
-</div
-{% endblock%}
+    <div id="Academia">
+        
+        <div class="col-sm-6 text-center">
+            <img class="d-block w-100 car" src="{% static 'img/SLIDE4.png' %}" alt="Sobre nós">
+        </div>
+    </div>
+    <div id="Light">
+        <h1>Plano Light</h1>
+    </div>
+    <div id="Medium">
+        <h1>Plano Medium</h1>
+    </div>
+    <div id="Premium">
+        <h1>Plano Premium</h1>
+    </div>
+</div>
+{% endblock conteudo%}
