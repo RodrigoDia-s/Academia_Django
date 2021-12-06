@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('pedidos', '0003_auto_20210216_1553'),
+        ('orders', '0003_auto_20210216_1553'),
     ]
 
     operations = [
@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
                 ('mercado_pago_id', models.CharField(blank=True, db_index=True, max_length=250)),
                 ('mercado_pago_status', models.CharField(blank=True, max_length=250)),
                 ('mercado_pago_status_detail', models.CharField(blank=True, max_length=250)),
-                ('order', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='payments', to='pedidos.order')),
+                ('order', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='payments', to='orders.order')),
             ],
             options={
                 'ordering': ('-modified',),

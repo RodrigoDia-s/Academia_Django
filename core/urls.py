@@ -27,5 +27,5 @@ urlpatterns = [
     path("", include('planos.urls')),
     path("pedidos/", include('pedidos.urls')),
     path("cart/", include('carrinho.urls')),
- 
+    path("pagamento/", include('pagamentos.urls')),
 ]
