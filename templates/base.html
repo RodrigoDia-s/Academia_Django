@@ -41,7 +41,7 @@
 
                     </li>
                     <li class="navbar navbar-dark" >
-                        <a href="{% url 'sobre'}">
+                        <a href="sobre">
                             Quem Somos</a>
 
                     </li>
@@ -107,6 +107,8 @@
     <script src="https://unpkg.com/imask@6.0.7/dist/imask.js"></script>
     <script src="{% static 'js/order-form.js' %}"></script>
 
+    {% block script%}
+    {% endblock%}
 </body>
 
 </html>

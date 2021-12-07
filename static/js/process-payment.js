@@ -3,7 +3,7 @@ var maskCPF = IMask(document.getElementById('docNumber'), {
 })
 
 var maskCardNumber = IMask(document.getElementById('cardNumber'), {
-    mask: '0000 0000 0000 0000'
+    mask: '0000000000000000'
 })
 
 window.Mercadopago.getIdentificationTypes()

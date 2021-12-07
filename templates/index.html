@@ -88,10 +88,17 @@
                     <h1 class="card-title pricing-card-title">{{ Plano.preco }}<small
                             class="text-muted fw-light">/mês</small>
                     </h1>
+                    {% if user.is_authenticated %}
                     <form action="{% url 'cart:add' Plano.id %}" method="post">
                         {% csrf_token %}
                         <input class="btn btn-success" type="submit" value="Assinar">
                     </form>
+                    {%else %}
+                    <form action="{% url 'account_login' %}" method="post">
+                        {% csrf_token %}
+                        <input class="btn btn-success" type="submit" value="Assinar">
+                    </form>
+                    {%endif%}
                 </div>
             </div>
 
