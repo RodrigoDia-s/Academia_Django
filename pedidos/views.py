@@ -15,7 +15,7 @@ class OrderCreateView(CreateView):
     def form_valid(self, form):
         cart = Cart(self.request)
         if cart:
-            cart.clear()
+
             order = form.save()
             for item in cart:
                 Item.objects.create(
@@ -26,8 +26,8 @@ class OrderCreateView(CreateView):
                 )
             cart.clear()
             self.request.session["order_id"] = order.id
-            return redirect(reverse("payments:process"))
-        return redirect(reverse("pages:home"))
+            return redirect(reverse("pagamentos:process"))
+        return redirect(reverse("home"))
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

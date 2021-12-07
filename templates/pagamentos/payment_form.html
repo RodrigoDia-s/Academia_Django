@@ -95,7 +95,7 @@
         </div>
         <div class="col-lg-6">
             <div class="card border-0 bg-light p-4">
-                {% include "order_summary.html" with items=order.items.all total_price=total_price %}
+                {% include "order_summary.html" with items=order total_price=total_price %}
             </div>
         </div>
     </div>

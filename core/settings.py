@@ -157,7 +157,7 @@ ACCOUNT_SESSION_REMEMBER = True
 
 # Cart
 
-CART_SESSION_ID = "carrinho"
+CART_SESSION_ID = "cart"
 CART_ITEM_MAX_QUANTITY = 1
 
 # django-allauth
