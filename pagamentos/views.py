@@ -31,13 +31,13 @@ class PaymentCreateView(CreateView):
 
     def form_valid(self, form):
         form.save()
-        redirect_url = "payments:failure"
+        redirect_url = "pagamentos:failure"
         status = form.instance.mercado_pago_status
 
         if status == "approved":
-            redirect_url = "payments:success"
+            redirect_url = "pagamentos:success"
         if status == "in_process":
-            redirect_url = "payments:pending"
+            redirect_url = "pagamentos:pending"
 
         if status and status != "rejected":
             del self.request.session["order_id"]
@@ -51,15 +51,15 @@ class PaymentCreateView(CreateView):
 
 
 class PaymentFailureView(TemplateView):
-    template_name = "payments/failure.html"
+    template_name = "pagamentos/failure.html"
 
 
 class PaymentPendingView(TemplateView):
-    template_name = "payments/pending.html"
+    template_name = "pagamentos/pending.html"
 
 
 class PaymentSuccessView(TemplateView):
-    template_name = "payments/success.html"
+    template_name = "pagamentos/success.html"
 
 
 @csrf_exempt

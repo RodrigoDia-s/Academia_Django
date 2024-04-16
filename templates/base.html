@@ -41,12 +41,12 @@
 
                     </li>
                     <li class="navbar navbar-dark" >
-                        <a href="{% url 'sobre'}">
+                        <a href="sobre">
                             Quem Somos</a>
 
                     </li>
                     <li id="utilitarios" runat="server" class="navbar navbar-dark">
-                        <a href='accounts/logout'>
+                        <a href="{% url 'account_logout' %}">
                             Sair</a>
                     </li>
                     {% else%}
@@ -55,7 +55,7 @@
 
                     </li>
                     <li class="navbar navbar-dark" >
-                        <a href="{% url 'sobre'}">
+                        <a href="sobre">
                             Quem Somos</a>
 
                     </li>
@@ -77,9 +77,9 @@
                 </a>
 
                 <div class="dropdown-menu dmenu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="cadastro">
+                    <a class="dropdown-item" href="{% url 'account_signup' %}">
                         Criar Conta</a>
-                    <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+                    <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
                 </div>
         </ul>
     </nav>
@@ -104,8 +104,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/imask@6.0.7/dist/imask.js"></script>
+    <script src="{% static 'js/order-form.js' %}"></script>
 
-
+    {% block script%}
+    {% endblock%}
 </body>
 
 </html>

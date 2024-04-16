@@ -6,7 +6,7 @@ from pedidos.models import Order
 
 
 class Payment(TimeStampedModel):
-    order = models.ForeignKey(Order, related_name="payments", on_delete=models.CASCADE)
+    order = models.ForeignKey(Order, related_name="pagamentos", on_delete=models.CASCADE)
     transaction_amount = models.DecimalField(
         "Valor da Transação", max_digits=10, decimal_places=2
     )

@@ -76,7 +76,7 @@ font-size: 15px;
 
 .box-menu {
     width: 600px;
-
+    color:white;
     border-radius: 45px;
     padding: 100px;
     position: relative;
@@ -95,6 +95,12 @@ font-size: 15px;
     text-transform: uppercase;
     font-weight: 500;
 }
+
+.box-menu h3 {
+    color: white;
+
+}
+
 
 .box-menu input[type="text"],
 .box-menu input[type="password"] {

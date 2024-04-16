@@ -8,7 +8,7 @@ from .views import (
     payment_webhook,
 )
 
-app_name = "payments"
+app_name = "pagamentos"
 
 urlpatterns = [
     path("process/", PaymentCreateView.as_view(), name="process"),

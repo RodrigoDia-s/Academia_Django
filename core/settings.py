@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+import environ
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -39,13 +41,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     # 3rd Party
+    'crispy_forms',
+    'widget_tweaks',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     # Local Apps
     'paginas.apps.PaginasConfig',
     'planos.apps.PlanosConfig',
     'carrinho.apps.CarrinhoConfig',
     'pedidos.apps.PedidosConfig',
-    'payments.apps.PaymentsConfig',
+    'pagamentos.apps.PagamentosConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -144,8 +153,38 @@ LOGIN_REDIRECT_URL = '/'
 
 LOGOUT_REDIRECT_URL = '/accounts/login'
 
+ACCOUNT_SESSION_REMEMBER = True
 
 # Cart
 
-CART_SESSION_ID = "carrinho"
+CART_SESSION_ID = "cart"
 CART_ITEM_MAX_QUANTITY = 1
+
+# django-allauth
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+
+
+SITE_ID = 1
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+LOGIN_REDIRECT_URL = "/"
+ACCOUNT_SESSION_REMEMBER = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = "email"
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_UNIQUE_EMAIL = True
+
+# Crispy
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+# Mercado Pago
+
+env = environ.Env()
+env.read_env(str(BASE_DIR / ".env"))
+MERCADO_PAGO_PUBLIC_KEY = env("MERCADO_PAGO_PUBLIC_KEY")
+MERCADO_PAGO_ACCESS_TOKEN = env("MERCADO_PAGO_ACCESS_TOKEN")

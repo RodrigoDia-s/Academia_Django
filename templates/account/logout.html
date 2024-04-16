@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %}LOGOUT{% endblock %}
+
+{% block conteudo %}
+<form  role="form" method="post">
+    <div class="box-menu">
+        <h1>LOGOUT</h1>
+        <h3> Você tem certeza que deseja sair? </h3>
+        {% csrf_token %}
+      
+            <button ID="btnLogar" Class="btn btn-outline-danger btn-destaque" Enabled="true"
+                typpe="submit">
+                Sair</button>
+            <br>
+
+
+
+        </div>
+
+    </div>
+</form>
+{% endblock %}

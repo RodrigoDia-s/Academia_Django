@@ -5,7 +5,7 @@ from django.conf import settings
 
 from planos.models import Plano
 
-from .forms import CartAddplanoForm
+from .forms import CartAddPlanoForm
 
 
 class Cart:
@@ -19,50 +19,42 @@ class Cart:
     def __iter__(self):
         cart = copy.deepcopy(self.cart)
 
+
         planos = Plano.objects.filter(id__in=cart)
         for plano in planos:
-            cart[str(plano.id)]["plano"] = plano
+            cart[str(plano.id)]["Plano"] = plano
 
         for item in cart.values():
-            item["price"] = Decimal(item["price"])
-            item["total_price"] = item["quantity"] * item["price"]
-            item["update_quantity_form"] = CartAddplanoForm(
-                initial={"quantity": item["quantity"], "override": True}
-            )
-
+            item["preco"] = Decimal(item["preco"])
+            item["total_price"] =  item["preco"]
+           
             yield item
 
     def __len__(self):
-        return sum(item["quantity"] for item in self.cart.values())
+        return sum(1 for item in self.cart.values())
 
-    def add(self, plano, quantity=1, override_quantity=False):
-        plano_id = str(plano.id)
+    def add(self, plano):
+        Plano_id = str(plano.id)
 
-        if plano_id not in self.cart:
-            self.cart[plano_id] = {
-                "quantity": 0,
-                "price": str(plano.price),
+        if Plano_id not in self.cart:
+            self.cart[Plano_id] = {
+                "preco": str(plano.preco)
             }
 
-        if override_quantity:
-            self.cart[plano_id]["quantity"] = quantity
-        else:
-            self.cart[plano_id]["quantity"] += quantity
-
-        self.cart[plano_id]["quantity"] = min(20, self.cart[plano_id]["quantity"])
+        
 
         self.save()
 
-    def remove(self, plano):
-        plano_id = str(plano.id)
+    def remove(self, Plano):
+        Plano_id = str(Plano.id)
 
-        if plano_id in self.cart:
-            del self.cart[plano_id]
+        if Plano_id in self.cart:
+            del self.cart[Plano_id]
             self.save()
 
     def get_total_price(self):
         return sum(
-            Decimal(item["price"]) * item["quantity"] for item in self.cart.values()
+            Decimal(item["preco"]) * 1 for item in self.cart.values()
         )
 
     def clear(self):

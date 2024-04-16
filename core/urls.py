@@ -23,6 +23,9 @@ from planos.models import Plano
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('paginas.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
-    path("", include('planos.urls'))
+    path('accounts/', include('allauth.urls')),
+    path("", include('planos.urls')),
+    path("pedidos/", include('pedidos.urls')),
+    path("cart/", include('carrinho.urls')),
+    path("pagamento/", include('pagamentos.urls')),
 ]
